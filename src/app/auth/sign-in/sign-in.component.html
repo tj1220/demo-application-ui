@@ -1,0 +1,40 @@
+
+<div class="sign-in">
+  <main>
+    <div class="brand">
+      <span>D</span>emo <span>A</span>pp
+    </div>
+    <form class="k-form" [formGroup]="form">
+      <fieldset class="k-form-fieldset k-d-grid k-grid-cols-12">
+        <header class="k-colspan-12">SIGN IN</header>
+        <kendo-formfield class="k-colspan-12">
+          <input [formControlName]="'email'" placeholder="Email Address" kendoTextBox/>
+          <kendo-formerror>Email is required</kendo-formerror>
+        </kendo-formfield>
+
+        <kendo-formfield class="k-colspan-12">
+          <input [formControlName]="'password'" type="password" placeholder="Enter Password" kendoTextBox/>
+          <kendo-formerror>
+            Password is required
+          </kendo-formerror>
+        </kendo-formfield>
+
+        <p class="k-colspan-12 forgot-password">Forgot password?</p>
+
+        <kendo-formfield class="k-colspan-12 mb-5">
+          <div class="k-checkbox-wrap">
+              <input #rememberMe type="checkbox" kendoCheckBox formControlName="rememberMe" />
+              <kendo-label [for]="rememberMe" class="k-checkbox-label">
+                Remember me
+              </kendo-label>
+          </div>
+        </kendo-formfield>
+      </fieldset>
+
+      <div class="k-form-buttons">
+        <button class="k-button k-primary" (click)="submitForm()">Sign in</button>
+      </div>
+    </form>
+    <p class="no-account">Don't have an account? <span (click)="goForSignUp()">Sign up</span></p>
+  </main>
+</div>

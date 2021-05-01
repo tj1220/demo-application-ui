@@ -1,0 +1,110 @@
+@import '../../../assets/styles/variables.scss';
+
+.brand {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: poppins-extra-bold;
+  font-size: 40px;
+  span {
+    color: $background-button-primary;
+    font-family: poppins-extra-bold;
+  }
+}
+
+.sign-up {
+  padding: 15px;
+  text-align: center;
+  line-height: calc(100vh - 30px);
+  main {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    width: 60%;
+    text-align: center;
+    .have-account {
+      font-size: 13px;
+      span {
+        color: $background-button-primary;
+        color: blueviolet;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+header {
+  text-align: center;
+  font-size: 30px;
+  font-family: poppins-extra-bold;
+  color: $gray-darker;
+  margin-bottom: 30px;
+}
+form {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  background: $background-auth-form;
+  border-radius: 6px;
+}
+
+kendo-formfield {
+  margin-top: 0 !important;
+  margin-bottom: 20px;
+  input.k-textbox {
+    color: black;
+    padding: 10px 12px;
+    height: 40px;
+    background: white;
+    border-color: transparent;
+    border-radius: 4px;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .k-checkbox-wrap {
+    text-align: left;
+    font-size: 13px;
+    span {
+      color: blueviolet;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    kendo-formerror {
+      margin-left: 25px;
+    }
+  }
+}
+
+.k-form-buttons {
+  display: grid;
+  .k-button {
+    padding: 6px 12px;
+    font-size: 16px;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    width: 80% !important;
+    form {
+      max-width: 500px !important;
+    }
+  }
+}
+
+@media (max-width: 574px) {
+  main {
+    width: 93% !important;
+    form {
+      max-width: 400px !important;
+    }
+  }
+}

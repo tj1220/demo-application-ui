@@ -1,0 +1,13 @@
+.k-button.k-primary {
+  background: $background-button-primary !important;
+  border-color: $background-button-primary;
+  &:hover {
+    background: $background-button-primary-hover !important;
+    border-color: $background-button-primary-hover;
+  }
+}
+
+.k-checkbox:checked, .k-checkbox.k-checked {
+  border-color: $background-button-primary !important;
+  background-color: $background-button-primary !important;
+}
