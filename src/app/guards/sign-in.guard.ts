@@ -10,7 +10,7 @@ export class SignInGuard implements CanActivate {
   canActivate(): boolean {
     let isSignedIn = sessionStorage.getItem(`signedIn`);
     if(isSignedIn) {
-      this.router.navigate([`end-user`]);
+      this.router.navigate([`user`]);
       return false;
     }
     return true;

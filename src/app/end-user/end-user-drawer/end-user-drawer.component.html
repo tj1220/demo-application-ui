@@ -1,0 +1,36 @@
+<kendo-drawer-container>
+  <kendo-drawer #drawer
+      [items]="items"
+      [mode]="appResponsiveService.isTabVertical() ? 'overlay' : 'push'"
+      [expanded]="!appResponsiveService.isTabVertical()"
+      [autoCollapse]="appResponsiveService.isTabVertical()"
+      (select)="onSelect($event)">
+      <ng-template kendoDrawerHeaderTemplate>
+        <header>
+          <div class="logo">
+            <span>D</span>emo
+          </div>
+        </header>
+      </ng-template>
+      <ng-template kendoDrawerFooterTemplate>
+        <footer>
+          <ul kendodrawerlist class="k-drawer-items">
+            <li class="k-drawer-item" [ngClass]="{'k-state-selected': selectSettings}" (click)="goToSettings()">
+              <span><i class="k-icon k-i-gear"></i></span>
+              <span class="k-item-text">Settings</span>
+            </li>
+            <li class="k-drawer-item">
+              <span><i class="k-icon k-i-logout"></i></span>
+              <span class="k-item-text">Sign out</span>
+            </li>
+          </ul>
+        </footer>
+      </ng-template>
+  </kendo-drawer>
+  <kendo-drawer-content>
+    <app-topbar (toggleDrawerEmitter)="toggleDrawer()"></app-topbar>
+    <div class="drawer-content-container">
+
+    </div>
+  </kendo-drawer-content>
+</kendo-drawer-container>
