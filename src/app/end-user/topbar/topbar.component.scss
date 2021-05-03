@@ -5,43 +5,40 @@ kendo-appbar {
   background: white;
   min-height: 54px;
   box-shadow: none !important;
-}
-
-.k-i-menu {
-  font-size: 18px;
-  color: $theme-color-1 !important;
-  padding: 15px;
-  background: transparent;
-  border-color: transparent;
-  border-radius: 3px;
-  cursor: pointer;
-  &:hover {
-    background: $background-green-light;
+  kendo-appbar-section {
+    .k-i-menu {
+      font-size: 18px;
+      color: $theme-color-1 !important;
+      padding: 15px;
+      background: transparent;
+      border-color: transparent;
+      border-radius: 3px;
+      cursor: pointer;
+      &:hover {
+        background: $background-green-light;
+      }
+    }
+    kendo-badge-container {
+      margin: 0 15px;
+      .k-i-bell {
+        font-size: 18px;
+        color: $theme-color-1 !important;
+        background: transparent;
+        border: none !important;
+        cursor: pointer;
+      }
+    }
+    .k-appbar-separator {
+      border-color: $theme-color-1;
+      border-width: 0 0 0 1px;
+      height: 30px;
+    }
+    kendo-avatar {
+      margin: 0 10px;
+      border: 1px solid $theme-color-1 !important;
+      color: $theme-color-1 !important;
+      background-color: transparent !important;
+      cursor: pointer;
+    }
   }
-}
-
-kendo-badge-container {
-  margin: 0 15px;
-}
-
-.k-i-bell {
-  font-size: 18px;
-  color: $theme-color-1 !important;
-  background: transparent;
-  border: none !important;
-  cursor: pointer;
-}
-
-.k-appbar .k-appbar-separator {
-  border-color: $theme-color-1;
-  border-width: 0 0 0 1px;
-  height: 30px;
-}
-
-kendo-avatar {
-  margin: 0 10px;
-  border: 1px solid $theme-color-1 !important;
-  color: $theme-color-1 !important;
-  background-color: transparent !important;
-  cursor: pointer;
 }

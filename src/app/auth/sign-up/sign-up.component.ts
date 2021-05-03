@@ -35,7 +35,7 @@ export class SignUpComponent implements OnInit {
     });
   }
 
-  submitForm() {
+  signUp() {
     this.form.markAllAsTouched();
     if(!this.form.controls[`termsAndPolicy`].value) {
       this.showTermsAndPolicyErrorMessage = true;
@@ -43,7 +43,7 @@ export class SignUpComponent implements OnInit {
     }
   }
 
-  clearForm() {
+  resetForm() {
     this.form.reset();
     this.showTermsAndPolicyErrorMessage = false;
   }

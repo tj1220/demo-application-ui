@@ -18,12 +18,8 @@ export class SignInComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  submitForm() {
+  signIn() {
     this.form.markAllAsTouched();
-  }
-
-  clearForm() {
-    this.form.reset();
   }
 
   goForSignUp() {
