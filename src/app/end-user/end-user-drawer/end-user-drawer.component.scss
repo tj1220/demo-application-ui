@@ -20,6 +20,9 @@ kendo-drawer {
 kendo-drawer-content {
   .drawer-content-container{
     height: calc(100vh - 54px);
+    max-height: calc(100vh - 84px);
+    overflow-y: auto;
     background: $background-green-lighter;
+    padding: 15px;
   }
 }

@@ -1,0 +1,9 @@
+<div class="dashboard">
+  <div class="summary-cards k-d-grid k-grid-cols-12 row">
+    <div *ngFor="let card of summaryCards" class="summary-card" [ngClass]="appResponsiveService.isMobile() ? 'k-colspan-12' : appResponsiveService.isTabHorizontal() ? 'k-colspan-6' : 'k-colspan-3'">
+      <app-summary-block
+        [data]="card">
+      </app-summary-block>
+    </div>
+  </div>
+</div>
