@@ -3,23 +3,23 @@
 kendo-drawer {
   min-height: 100vh;
   border: none !important;
-}
-
-header {
-  padding-left: 17px;
-  line-height: 54px;
-  .logo {
-    vertical-align: middle;
+  header {
+    padding-left: 17px;
+    line-height: 54px;
+    .logo {
+      vertical-align: middle;
+    }
+  }
+  footer{
+    width: 100%;
+    bottom: 0;
+    position: absolute;
   }
 }
 
-.drawer-content-container{
-  height: calc(100vh - 54px);
-  background: $background-green-lighter;
-}
-
-footer{
-  width: 100%;
-  bottom: 0;
-  position: absolute;
+kendo-drawer-content {
+  .drawer-content-container{
+    height: calc(100vh - 54px);
+    background: $background-green-lighter;
+  }
 }
