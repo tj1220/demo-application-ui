@@ -1,9 +1,9 @@
 <kendo-drawer-container>
   <kendo-drawer #drawer
       [items]="items"
-      [mode]="appResponsiveService.isTabVertical() ? 'overlay' : 'push'"
-      [expanded]="!appResponsiveService.isTabVertical()"
-      [autoCollapse]="appResponsiveService.isTabVertical()"
+      [mode]="appResponsiveService.isTabHorizontal() ? 'overlay' : 'push'"
+      [expanded]="!appResponsiveService.isTabHorizontal()"
+      [autoCollapse]="appResponsiveService.isTabHorizontal()"
       (select)="onSelect($event)">
       <ng-template kendoDrawerHeaderTemplate>
         <header>
@@ -30,7 +30,7 @@
   <kendo-drawer-content>
     <app-topbar (toggleDrawerEmitter)="toggleDrawer()"></app-topbar>
     <div class="drawer-content-container">
-
+      <router-outlet></router-outlet>
     </div>
   </kendo-drawer-content>
 </kendo-drawer-container>

@@ -5,10 +5,7 @@ import { AppResponsiveService } from 'src/app/services/app-responsive.service';
 @Component({
   selector: 'app-end-user-drawer',
   templateUrl: './end-user-drawer.component.html',
-  styleUrls: ['./end-user-drawer.component.scss'],
-  // host: {
-  //   "(window:resize)": "onWindowResize($event)"
-  // }
+  styleUrls: ['./end-user-drawer.component.scss']
 })
 export class EndUserDrawerComponent implements OnInit {
   @ViewChild(`drawer`) drawer: any;
@@ -16,12 +13,7 @@ export class EndUserDrawerComponent implements OnInit {
   constructor(public appResponsiveService: AppResponsiveService) { }
 
   ngOnInit(): void {
-    // this.expanded = !this.appResponsiveService.isTabVertical();
   }
-
-  // onWindowResize(event) {
-  //   this.expanded = !this.appResponsiveService.isTabVertical();
-  // }
 
   public selected = 'Inbox';
 

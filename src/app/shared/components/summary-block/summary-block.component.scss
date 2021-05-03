@@ -1,0 +1,30 @@
+@import '../../../../assets/styles/variables.scss';
+
+.block {
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  header {
+    .title {
+      margin-top: 13px;
+    }
+    .icon {
+      height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      background: white;
+      i {
+        margin: 12px 11px;
+        font-size: 32px;
+      }
+    }
+  }
+  main {
+    font-family: poppins-bold;
+    font-size: 30px;
+    color: black;
+  }
+  footer {
+    font-size: 13px;
+  }
+}
