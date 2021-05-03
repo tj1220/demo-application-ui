@@ -1,7 +1,19 @@
+@import '../styles/variables.scss';
+
 * {
   font-family: poppins-regular;
 }
 
 body {
   margin: 0;
+}
+
+.logo {
+  font-family: poppins-extra-bold;
+  font-size: 30px;
+  color: black;
+  span {
+    font-family: poppins-extra-bold;
+    color: $theme-color-1;
+  }
 }

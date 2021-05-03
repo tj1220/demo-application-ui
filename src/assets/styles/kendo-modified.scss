@@ -11,3 +11,35 @@
   border-color: $background-button-primary !important;
   background-color: $background-button-primary !important;
 }
+
+.k-drawer-item {
+  &:hover {
+    background: $background-green-light;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  .k-icon {
+    margin: 0 0 0 10px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    transition: 0.3s all;
+  }
+  .k-item-text {
+    padding: 3px 10px;
+  }
+}
+
+.k-drawer-item.k-state-selected {
+  background: $background-green-light;
+  color: $theme-color-1;
+  box-shadow: none;
+  .k-icon {
+    background: $theme-color-1;
+    color: white;
+  }
+  &:hover {
+    background: $background-green-light;
+    color: $theme-color-1;
+  }
+}
