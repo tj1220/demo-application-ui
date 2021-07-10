@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DrawerItem, DrawerSelectEvent } from '@progress/kendo-angular-layout';
 import { AppResponsiveService } from 'src/app/services/app-responsive.service';
@@ -10,7 +11,9 @@ import { AppResponsiveService } from 'src/app/services/app-responsive.service';
 export class EndUserDrawerComponent implements OnInit {
   @ViewChild(`drawer`) drawer: any;
   expanded: boolean = true;
-  constructor(public appResponsiveService: AppResponsiveService) { }
+  constructor(
+    public appResponsiveService: AppResponsiveService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -37,6 +40,10 @@ export class EndUserDrawerComponent implements OnInit {
       this.selectSettings = true;
       this.items.forEach((item => item.selected = false))
       this.items = [...this.items];
+    }
+
+    signOut() {
+      this.router.navigate([`sign-in`]);
     }
 
 }

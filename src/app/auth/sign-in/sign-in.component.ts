@@ -19,7 +19,8 @@ export class SignInComponent implements OnInit {
   ngOnInit(): void {}
 
   signIn() {
-    this.form.markAllAsTouched();
+    // this.form.markAllAsTouched();
+    this.router.navigate([`user`]);
   }
 
   goForSignUp() {
