@@ -1,0 +1,26 @@
+<kendo-chart *ngIf="chartObject.data.length > 0">
+    <ng-template kendoChartDonutCenterTemplate>
+        <h3>{{chartObject.data.length}}</h3>
+        <p>Total Categories</p>
+    </ng-template>
+    <kendo-chart-series>
+        <kendo-chart-series-item
+            [holeSize]="appResponsiveService.isMobile() ? 50 : 70"
+            [type]="'donut'"
+            [data]="chartObject.data"
+            [categoryField]="chartObject.categoryField"
+            [field]="chartObject.field">
+            <kendo-chart-series-item-tooltip>
+                <ng-template let-value="value">
+                    {{value | currency}}
+                </ng-template>
+            </kendo-chart-series-item-tooltip>
+        </kendo-chart-series-item>
+    </kendo-chart-series>
+    <kendo-chart-legend
+        [position]="appResponsiveService.isTabHorizontal() ? appResponsiveService.isMobile() ? 'bottom' : 'right' : 'bottom'"
+        [align]="'center'"
+        [labels]="legendLabel"
+        [markers]="legendMarker">
+    </kendo-chart-legend>
+</kendo-chart>

@@ -1,0 +1,23 @@
+<kendo-chart *ngIf="chartObject" [valueAxis]="chartObject.valueAxis">
+  <kendo-chart-category-axis>
+      <kendo-chart-category-axis-item [categories]="chartObject.categories">
+        <kendo-chart-category-axis-item-labels
+          [rotation]="appResponsiveService.isMobile() ? -75 : 0">
+        </kendo-chart-category-axis-item-labels>
+      </kendo-chart-category-axis-item>
+  </kendo-chart-category-axis>
+
+  <kendo-chart-series>
+    <kendo-chart-series-item
+      [type]="'column'"
+      [color]="isAnnualIncome ? getColumnColor : chartObject.color"
+      [data]="chartObject.data"
+      [gap]="2">
+        <kendo-chart-series-item-tooltip>
+          <ng-template let-value="value">
+              {{value | currency}}
+          </ng-template>
+        </kendo-chart-series-item-tooltip>
+    </kendo-chart-series-item>
+  </kendo-chart-series>
+</kendo-chart>
