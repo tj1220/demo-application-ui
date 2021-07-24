@@ -4,9 +4,11 @@
       [mode]="appResponsiveService.isTabHorizontal() ? 'overlay' : 'push'"
       [expanded]="!appResponsiveService.isTabHorizontal()"
       [autoCollapse]="appResponsiveService.isTabHorizontal()"
+      [mini]="true"
+      [miniWidth]="45"
       (select)="onSelect($event)">
       <ng-template kendoDrawerHeaderTemplate>
-        <header>
+        <header *ngIf="drawer.expanded">
           <div class="logo">
             <span>D</span>emo
           </div>
@@ -19,9 +21,9 @@
               <span><i class="k-icon k-i-gear"></i></span>
               <span class="k-item-text">Settings</span>
             </li>
-            <li class="k-drawer-item">
+            <li class="k-drawer-item" (click)="signOut()">
               <span><i class="k-icon k-i-logout"></i></span>
-              <span class="k-item-text" (click)="signOut()">Sign out</span>
+              <span class="k-item-text">Sign out</span>
             </li>
           </ul>
         </footer>
