@@ -6,23 +6,27 @@
   color: white;
   header {
     .title {
-      margin-top: 13px;
+      width: calc(100% - 50px);
       font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      display: inline-block;
     }
     .icon {
-      height: 65px;
-      width: 65px;
+      height: 50px;
+      width: 50px;
       border-radius: 50%;
       background: white;
+      display: inline-block;
       i {
-        margin: 16px 15px;
-        font-size: 35px;
+        margin: 11px 10px;
+        font-size: 30px;
       }
     }
   }
   main {
     font-family: poppins-bold;
-    font-size: 30px;
+    font-size: 26px;
     color: black;
   }
   footer {

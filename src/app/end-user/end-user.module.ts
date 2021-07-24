@@ -9,8 +9,6 @@ import { BadgeModule } from '@progress/kendo-angular-indicators';
 import { DashboardComponent } from './child-components/dashboard/dashboard.component';
 import { SharedModule } from '../shared/shared.module';
 
-
-
 @NgModule({
   declarations: [EndUserDrawerComponent, TopbarComponent, DashboardComponent],
   imports: [

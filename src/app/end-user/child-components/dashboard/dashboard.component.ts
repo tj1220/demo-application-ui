@@ -12,29 +12,29 @@ export class DashboardComponent implements OnInit {
       title: `CARD-1 TITLE`,
       icon: `front-element`,
       amount: 1234,
-      subtitle: `Card - 1 subtitle goes here`,
-      backgroundColor: '#FBAD4C'
+      subtitle: `Card-1 subtitle goes here ...`,
+      backgroundColor: '#5CA7FF'
     },
     {
-      title: `CARD-1 TITLE`,
+      title: `CARD-2 TITLE`,
       icon: `back-element`,
       amount: 1234,
-      subtitle: `Card - 1 subtitle goes here`,
-      backgroundColor: '#59D05D'
+      subtitle: `Card-2 subtitle goes here ...`,
+      backgroundColor: '#4FDFC2'
     },
     {
-      title: `CARD-1 TITLE`,
+      title: `CARD-3 TITLE`,
       icon: `forward-element`,
       amount: 1234,
-      subtitle: `Card - 1 subtitle goes here`,
-      backgroundColor: '#FF646D'
+      subtitle: `Card-3 subtitle goes here ...`,
+      backgroundColor: '#FFBE5F'
     },
     {
-      title: `CARD-1 TITLE`,
+      title: `CARD-4 TITLE`,
       icon: `backward-element`,
       amount: 1234,
-      subtitle: `Card - 1 subtitle goes here`,
-      backgroundColor: '#1D62F0'
+      subtitle: `Card-4 subtitle goes here ...`,
+      backgroundColor: '#FF758C'
     }
   ];
   constructor(public appResponsiveService: AppResponsiveService) { }
