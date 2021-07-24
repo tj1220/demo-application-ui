@@ -22,8 +22,7 @@ export class EndUserDrawerComponent implements OnInit {
 
     public items: Array<DrawerItem> = [
         { text: 'Dashboard', icon: 'k-i-group', selected: true },
-        { text: 'Cards', icon: 'k-i-set-column-position' },
-        { text: 'Notifications', icon: 'k-i-bell' }
+        { text: 'Cards', icon: 'k-i-set-column-position' }
     ];
 
     public onSelect(ev: DrawerSelectEvent): void {

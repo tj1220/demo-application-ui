@@ -1,9 +1,9 @@
 @import '../../../assets/styles/variables.scss';
 
 kendo-appbar {
-  padding: 5px 15px 5px 10px;
+  padding: 0 15px 0 10px;
   background: white;
-  min-height: 54px;
+  height: 46px;
   box-shadow: none !important;
   kendo-appbar-section {
     .k-i-menu {
@@ -27,11 +27,6 @@ kendo-appbar {
         border: none !important;
         cursor: pointer;
       }
-    }
-    .k-appbar-separator {
-      border-color: $theme-color-1;
-      border-width: 0 0 0 1px;
-      height: 30px;
     }
     kendo-avatar {
       margin: 0 10px;
