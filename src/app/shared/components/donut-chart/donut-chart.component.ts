@@ -12,15 +12,16 @@ export class DonutChartComponent implements OnInit {
   legendLabel: LegendLabels = {
     margin: {
       left: 8,
-      top: 15
+      top: 15,
+      right: 25
     },
     content: (e: LegendLabelsContentArgs): string => {
       return `${e.text}\n${(e.percentage * 100).toFixed(2)}%\n`;
     }
   };
   legendMarker: LegendMarkers = {
-    height: 14,
-    width: 14,
+    height: 10,
+    width: 10,
     type: `square`
   };
 

@@ -46,16 +46,16 @@ export class DashboardService {
         format: '{0:C0}'
       }
     },
-    color: '#4473C5'
+    color: 'rgb(0, 100, 0)'
   };
 
   donutChartObject: any = {
     data: [
-      {category: 'Category 1', value: 10000},
-      {category: 'Category 2', value: 15000},
-      {category: 'Category 3', value: 20000},
-      {category: 'Category 4', value: 25000},
-      {category: 'Category 5', value: 30000},
+      {category: 'Category 1', value: 10000, color: 'rgba(0, 100, 0, 0.2)'},
+      {category: 'Category 2', value: 15000, color: 'rgba(0, 100, 0, 0.4)'},
+      {category: 'Category 3', value: 20000, color: 'rgba(0, 100, 0, 0.6)'},
+      {category: 'Category 4', value: 25000, color: 'rgba(0, 100, 0, 0.8)'},
+      {category: 'Category 5', value: 30000, color: 'rgba(0, 100, 0, 1.0)'},
     ],
     field: 'value',
     categoryField: 'category'

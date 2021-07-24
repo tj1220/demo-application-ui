@@ -9,7 +9,8 @@
             [type]="'donut'"
             [data]="chartObject.data"
             [categoryField]="chartObject.categoryField"
-            [field]="chartObject.field">
+            [field]="chartObject.field"
+            [color]="'color'">
             <kendo-chart-series-item-tooltip>
                 <ng-template let-value="value">
                     {{value | currency}}
