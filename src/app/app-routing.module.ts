@@ -1,3 +1,4 @@
+import { DemoItemsComponent } from './end-user/child-components/demo-items/demo-items.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
@@ -33,6 +34,10 @@ const routes: Routes = [
       {
         path: `dashboard`,
         component: DashboardComponent
+      },
+      {
+        path: `demo-items`,
+        component: DemoItemsComponent
       }
     ]
   }

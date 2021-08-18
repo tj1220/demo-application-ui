@@ -8,9 +8,10 @@ import { AppBarModule } from '@progress/kendo-angular-navigation';
 import { BadgeModule } from '@progress/kendo-angular-indicators';
 import { DashboardComponent } from './child-components/dashboard/dashboard.component';
 import { SharedModule } from '../shared/shared.module';
+import { DemoItemsComponent } from './child-components/demo-items/demo-items.component';
 
 @NgModule({
-  declarations: [EndUserDrawerComponent, TopbarComponent, DashboardComponent],
+  declarations: [EndUserDrawerComponent, TopbarComponent, DashboardComponent, DemoItemsComponent],
   imports: [
     CommonModule,
     RouterModule,
