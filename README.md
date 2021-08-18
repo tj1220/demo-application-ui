@@ -1,1 +1,1 @@
-# demo-dashboard-ui
+# demo-application-ui
