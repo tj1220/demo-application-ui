@@ -6,7 +6,7 @@
       </app-summary-block>
     </div>
   </div>
-  <div class="k-d-grid k-grid-cols-12 row">
+  <div class="k-d-grid k-grid-cols-12 row mb-16">
     <div class="column-chart" [ngClass]="appResponsiveService.isPC() ? 'k-colspan-12 mb-16' : 'k-colspan-7'">
       <header>This Year's Statistics</header>
       <app-column-chart
@@ -18,6 +18,14 @@
       <app-donut-chart
         [chartObject]="dashboardService.donutChartObject">
       </app-donut-chart>
+    </div>
+  </div>
+  <div class="k-d-grid k-grid-cols-12 row">
+    <div class="k-colspan-12 grid">
+      <header>Records</header>
+      <app-grid
+        [gridColumns]="gridColumns"
+        [gridData]="dashboardService.gridData"></app-grid>
     </div>
   </div>
 </div>

@@ -1,3 +1,4 @@
+import { departments, gender } from './../shared/enums';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -46,18 +47,76 @@ export class DashboardService {
         format: '{0:C0}'
       }
     },
-    color: '#4473C5'
+    color: 'rgb(0, 100, 0)'
   };
 
   donutChartObject: any = {
     data: [
-      {category: 'Category 1', value: 10000},
-      {category: 'Category 2', value: 15000},
-      {category: 'Category 3', value: 20000},
-      {category: 'Category 4', value: 25000},
-      {category: 'Category 5', value: 30000},
+      {category: 'Category 1', value: 10000, color: 'rgba(0, 100, 0, 0.2)'},
+      {category: 'Category 2', value: 15000, color: 'rgba(0, 100, 0, 0.4)'},
+      {category: 'Category 3', value: 20000, color: 'rgba(0, 100, 0, 0.6)'},
+      {category: 'Category 4', value: 25000, color: 'rgba(0, 100, 0, 0.8)'},
+      {category: 'Category 5', value: 30000, color: 'rgba(0, 100, 0, 1.0)'},
     ],
     field: 'value',
     categoryField: 'category'
   };
+
+  gridData: any[] = [{
+    employeeId: 'EMP-100001',
+    employeeName: 'James',
+    doj: new Date('November 15, 2019'),
+    age: 26,
+    gender: gender.Male,
+    department: departments.Engineering
+  }, {
+    employeeId: 'EMP-100002',
+    employeeName: 'John',
+    doj: new Date('March 1, 2020'),
+    age: 24,
+    gender: gender.Male,
+    department: departments.Engineering
+  }, {
+    employeeId: 'EMP-100006',
+    employeeName: 'Elizabeth',
+    doj: new Date('March 1, 2020'),
+    age: 24,
+    gender: gender.Female,
+    department: departments.Sales
+  }, {
+    employeeId: 'EMP-100007',
+    employeeName: 'Mary',
+    doj: new Date('January 15, 2019'),
+    age: 21,
+    gender: gender.Female,
+    department: departments.Engineering
+  }, {
+    employeeId: 'EMP-100003',
+    employeeName: 'Robert',
+    doj: new Date('January 15, 2018'),
+    age: 30,
+    gender: gender.Male,
+    department: departments.HR
+  }, {
+    employeeId: 'EMP-100004',
+    employeeName: 'William',
+    doj: new Date('January 1, 2021'),
+    age: 20,
+    gender: gender.Male,
+    department: departments.Management
+  }, {
+    employeeId: 'EMP-100005',
+    employeeName: 'Thomas',
+    doj: new Date('November 15, 2019'),
+    age: 26,
+    gender: gender.Male,
+    department: departments.Management
+  }, {
+    employeeId: 'EMP-100008',
+    employeeName: 'Sarah',
+    doj: new Date('January 1, 2021'),
+    age: 18,
+    gender: gender.Female,
+    department: departments.HR
+  }];
 }

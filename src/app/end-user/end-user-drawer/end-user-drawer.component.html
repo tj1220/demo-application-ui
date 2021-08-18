@@ -4,6 +4,7 @@
       [mode]="appResponsiveService.isTabHorizontal() ? 'overlay' : 'push'"
       [expanded]="!appResponsiveService.isTabHorizontal()"
       [autoCollapse]="appResponsiveService.isTabHorizontal()"
+      [width]="180"
       [mini]="true"
       [miniWidth]="45"
       (select)="onSelect($event)">

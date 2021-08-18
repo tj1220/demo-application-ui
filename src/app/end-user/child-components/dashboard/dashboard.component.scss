@@ -3,7 +3,7 @@
     background: white;
     border-radius: 5px;
     padding: 15px 10px;
-    .summary-card, .column-chart, .donut-chart {
+    .summary-card, .column-chart, .donut-chart, .grid {
       padding: 10px;
     }
     .summary-card:hover {
@@ -11,7 +11,7 @@
       transition: 0.3s all;
       cursor: pointer;
     }
-    .column-chart, .donut-chart {
+    .column-chart, .donut-chart, .grid {
       header {
         font-family: poppins-bold;
         font-size: 24px;
