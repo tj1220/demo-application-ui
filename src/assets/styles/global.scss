@@ -1,0 +1,39 @@
+@import '../styles/variables.scss';
+
+* {
+  font-family: poppins-regular;
+}
+
+body {
+  margin: 0;
+}
+
+.logo {
+  font-family: poppins-extra-bold;
+  font-size: 30px;
+  color: black;
+  span {
+    font-family: poppins-extra-bold;
+    color: $theme-color-1;
+  }
+}
+
+.line-with-link {
+  font-size: 13px;
+  span {
+    color: $background-button-primary;
+    color: blueviolet;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}

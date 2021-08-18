@@ -1,0 +1,31 @@
+<div class="dashboard">
+  <div class="summary-cards k-d-grid k-grid-cols-12 row mb-16">
+    <div *ngFor="let card of dashboardService.summaryCards" class="summary-card" [ngClass]="appResponsiveService.isMobile() ? 'k-colspan-12' : appResponsiveService.isTabHorizontal() ? 'k-colspan-6' : 'k-colspan-3'">
+      <app-summary-block
+        [data]="card">
+      </app-summary-block>
+    </div>
+  </div>
+  <div class="k-d-grid k-grid-cols-12 row mb-16">
+    <div class="column-chart" [ngClass]="appResponsiveService.isPC() ? 'k-colspan-12 mb-16' : 'k-colspan-7'">
+      <header>This Year's Statistics</header>
+      <app-column-chart
+        [chartObject]="dashboardService.columnChartObject">
+      </app-column-chart>
+    </div>
+    <div class="donut-chart" [ngClass]="appResponsiveService.isPC() ? 'k-colspan-12' : 'k-colspan-5'">
+      <header>Contributions</header>
+      <app-donut-chart
+        [chartObject]="dashboardService.donutChartObject">
+      </app-donut-chart>
+    </div>
+  </div>
+  <div class="k-d-grid k-grid-cols-12 row">
+    <div class="k-colspan-12 grid">
+      <header>Records</header>
+      <app-grid
+        [gridColumns]="gridColumns"
+        [gridData]="dashboardService.gridData"></app-grid>
+    </div>
+  </div>
+</div>

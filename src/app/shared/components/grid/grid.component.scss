@@ -1,0 +1,12 @@
+@import '../../../../assets/styles/variables.scss';
+
+.details-row {
+  .pair {
+    padding: 7px 5px;
+    font-size: 12px;
+    .value {
+      text-align: right;
+      color: $theme-color-1;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="block" [ngStyle]="{'background-color': data.backgroundColor}">
+  <header>
+    <div class="title">
+      {{data.title}}
+    </div>
+    <div class="icon">
+      <i class="k-icon" [class]="'k-i-'+data.icon" [ngStyle]="{'color': data.backgroundColor}"></i>
+    </div>
+  </header>
+  <main>
+    {{data.amount | currency}}
+  </main>
+  <footer>
+    {{data.subtitle}}
+  </footer>
+</div>

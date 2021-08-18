@@ -1,0 +1,254 @@
+.k-button.k-primary {
+  background: $background-button-primary !important;
+  border-color: $background-button-primary;
+  &:hover {
+    background: $background-button-primary-hover !important;
+    border-color: $background-button-primary-hover;
+  }
+}
+
+.k-checkbox:checked, .k-checkbox.k-checked {
+  border-color: $background-button-primary !important;
+  background-color: $background-button-primary !important;
+}
+
+.k-drawer-item {
+  padding: 5px 8px;
+  &:hover {
+    background: $background-green-light;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  .k-icon {
+    margin: 0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: 0.3s all;
+  }
+  .k-item-text {
+    padding: 3px 10px;
+  }
+}
+
+.k-drawer-item.k-state-selected {
+  background: $background-green-light;
+  color: $theme-color-1;
+  box-shadow: none;
+  .k-icon {
+    background: $theme-color-1;
+    color: white;
+  }
+  &:hover {
+    background: $background-green-light;
+    color: $theme-color-1;
+  }
+}
+
+// Kendo Grid START
+.k-grid {
+  height: auto;
+  // max-height: calc(100vh - 184px);
+  border-radius: 7px;
+  border-color: $background-green-light;
+  overflow: hidden;
+  thead {
+    .k-header {
+      font-weight: 600;
+      color: black;
+    }
+    th, td {
+      background: white !important;
+    }
+    kendo-dropdownlist {
+      width: 100% !important;
+    }
+  }
+  tr.k-alt {
+      background-color: transparent;
+  }
+  tbody tr {
+    &:hover {
+      background: $background-green-lighter !important;
+    }
+    td:hover {
+      cursor: pointer;
+    }
+  }
+  .k-detail-row {
+    background: #F9F4F0;
+    &:hover {
+      background: #F9F4F0;
+    }
+  }
+  .k-master-row {
+    &:hover {
+      background: #F9F4F0;
+    }
+  }
+}
+
+.k-grid-header, .k-header, th.k-header,
+.k-grid-header-wrap, .k-grouping-header,
+.k-grouping-header .k-group-indicator,
+.k-grid td, .k-grid-footer, .k-grid-footer-wrap,
+.k-grid-content-locked, .k-grid-footer-locked,
+.k-grid-header-locked, .k-filter-row > td,
+.k-filter-row > th {
+  border-color: #F9F4F0 !important;
+}
+
+.k-grid-pager
+{
+  border-radius: 0 0 7px 7px;
+  border-color: $background-green-light;
+  border-top: 1px solid #F9F4F0 !important;
+  background: white !important;
+  overflow: hidden;
+}
+
+kendo-grid-filter-cell-operators > button {
+  display: none !important;
+}
+
+.grid-main-column {
+  color: $theme-color-1 !important;
+  font-weight: 600 !important;
+}
+
+kendo-pager-numeric-buttons {
+  li {
+    span, a {
+      border-radius: 50%;
+      color: $theme-color-1 !important;
+    }
+    .k-state-selected {
+      font-weight: 600 !important;
+      color: white !important;
+      background: $theme-color-1 !important;
+    }
+  }
+}
+
+kendo-pager-info {
+  font-size: 12px;
+  color: black;
+}
+
+kendo-pager-page-sizes {
+  font-size: 12px;
+  color: black;
+  display: inline-block !important;
+  select {
+    width: 60px !important;
+    padding: 3px;
+    background: transparent !important;
+    border: 1px solid $theme-color-1 !important;
+    border-radius: 4px;
+    color: $theme-color-1 !important;
+    font-weight: 600;
+  }
+}
+
+.k-pager-numbers .k-link.k-state-selected {
+  border-radius: 50%;
+}
+
+kendo-grid .k-header.text-center .k-column-title {
+  margin: 0 auto !important;
+}
+// Kendo Grid END
+
+.k-checkbox:indeterminate, .k-checkbox.k-state-indeterminate, .k-checkbox.k-indeterminate {
+  border-color: $theme-color-1;
+  color: $theme-color-1;
+  background-color: #ffffff;
+}
+
+.k-list .k-item.k-state-selected, .k-list-optionlabel.k-state-selected {
+  color: #ffffff;
+  background-color: $theme-color-1;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.k-grid-header .k-i-sort-asc-sm, .k-grid-header .k-i-sort-desc-sm, .k-grid-header .k-sort-order {
+  color: $theme-color-1;
+}
+
+.k-grid td.k-state-focused,
+.k-grid th.k-state-focused,
+.k-grid th:focus,
+.k-grid .k-master-row > td:focus,
+.k-grid .k-grouping-row > td:focus,
+.k-grid .k-detail-row > td:focus,
+.k-grid .k-group-footer > td:focus,
+.k-grid .k-grid-pager.k-state-focused,
+.k-dropdown .k-dropdown-wrap.k-state-focused,
+.k-dropdowntree .k-dropdown-wrap.k-state-focused {
+  box-shadow: none !important;
+}
+
+.k-dropdown .k-dropdown-wrap,
+.k-dropdowntree .k-dropdown-wrap,
+.k-numerictextbox .k-numeric-wrap,
+.k-numerictextbox .k-numeric-wrap,
+.k-datepicker .k-picker-wrap,
+.k-timepicker .k-picker-wrap,
+.k-datetimepicker .k-picker-wrap,
+.k-dateinput .k-dateinput-wrap,
+.k-filtercell .k-filtercell-wrapper > .k-textbox {
+  border-radius: 3px;
+  color: $theme-color-1;
+  background-color: white;
+  background-image: none;
+  &:hover {
+    background: white;
+  }
+}
+
+.k-text-selection ::selection,
+.k-block ::selection,
+.k-panel ::selection,
+.k-pane-wrapper ::selection,
+.k-view ::selection,
+.k-progressbar ::selection,
+.k-numerictextbox ::selection,
+.k-flatcolorpicker ::selection,
+.k-combobox ::selection,
+.k-datepicker ::selection,
+.k-timepicker ::selection,
+.k-datetimepicker ::selection,
+.k-dateinput ::selection,
+.k-dropdown ::selection,
+.k-dropdowntree ::selection,
+.k-multiselect ::selection,
+.k-maskedtextbox ::selection,
+.k-rating ::selection,
+.k-window ::selection,
+.k-drawer ::selection,
+.k-notification ::selection,
+.k-breadcrumb ::selection,
+.k-pager-wrap ::selection,
+.k-panelbar ::selection,
+.k-card ::selection,
+.k-splitter ::selection,
+.k-spreadsheet ::selection,
+.k-taskboard ::selection,
+.k-scheduler ::selection,
+.k-chat ::selection,
+.k-mediaplayer ::selection,
+.k-pdf-viewer ::selection,
+kendo-scrollview.k-scrollview-wrap ::selection,
+kendo-scrollview.k-scrollview ::selection,
+div.k-scrollview ::selection,
+.k-chart ::selection,
+.k-sparkline ::selection,
+.k-stockchart ::selection {
+  background-color: $theme-color-1;
+  color: white;
+}
+
+kendo-grid .k-icon {
+  color: $theme-color-1 !important;
+}

@@ -1,0 +1,39 @@
+@import '../../../assets/styles/variables.scss';
+
+kendo-appbar {
+  padding: 0 15px 0 10px;
+  background: white;
+  height: 46px;
+  box-shadow: none !important;
+  kendo-appbar-section {
+    .k-i-menu {
+      font-size: 18px;
+      color: $theme-color-1 !important;
+      padding: 15px;
+      background: transparent;
+      border-color: transparent;
+      border-radius: 3px;
+      cursor: pointer;
+      &:hover {
+        background: $background-green-light;
+      }
+    }
+    kendo-badge-container {
+      margin: 0 15px;
+      .k-i-bell {
+        font-size: 18px;
+        color: $theme-color-1 !important;
+        background: transparent;
+        border: none !important;
+        cursor: pointer;
+      }
+    }
+    kendo-avatar {
+      margin: 0 10px;
+      border: 1px solid $theme-color-1 !important;
+      color: $theme-color-1 !important;
+      background-color: transparent !important;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+<kendo-grid
+  *ngIf="!appResponsiveService.isTabVertical()"
+  [data]="gridDataToShow"
+  [resizable]="true"
+  [pageSize]="state.take"
+  [skip]="state.skip"
+  [sort]="state.sort"
+  [filter]="state.filter"
+  [sortable]="true"
+  [pageable]="true"
+  [filterable]="true"
+  [selectable]="selectableSettings"
+  [navigable]="true"
+  kendoGridSelectBy
+  [selectedKeys]="selectedKeys"
+  (filterChange)="onFilterChange()"
+  (dataStateChange)="dataStateChange($event)">
+  <kendo-grid-checkbox-column [width]="41" showSelectAll="true"></kendo-grid-checkbox-column>
+  <kendo-grid-column
+    *ngFor="let column of gridColumns"
+    [field]="column.field"
+    [title]="column.title"
+    [filter]="column.filter.type"
+    [format]="column.format ? column.format.syntax : null"
+    [headerClass]="column.headerClassObject"
+    [class]="column.classObject"
+    [width]="column.width">
+    <ng-template
+      *ngIf="column.filter.type == 'dropdown'"
+      kendoGridFilterCellTemplate
+      let-filter>
+      <app-grid-dropdown-filter
+        [filter]="filter"
+        [data]="column.filter.dropdownData"
+        [valueField]="column.field"
+        [defaultItem]="column.filter.dropdownDefaultText"></app-grid-dropdown-filter>
+    </ng-template>
+    <ng-template
+      *ngIf="column.format && column.format.type === 'Date'"
+      kendoGridFilterCellTemplate let-filter let-column="column">
+      <kendo-grid-date-filter-cell
+        [column]="column"
+        [filter]="filter"
+        [formatPlaceholder]="{year: 'YYYY', month: 'MM', day: 'DD'}">
+      </kendo-grid-date-filter-cell>
+    </ng-template>
+
+    <ng-template *ngIf="column.format && column.format.type === 'Date'" kendoGridCellTemplate let-dataItem>
+      {{dataItem[column.field] | date: column.format.syntax.slice(4, column.format.syntax.length - 1)}}
+    </ng-template>
+  </kendo-grid-column>
+  <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+    <kendo-pager-prev-buttons></kendo-pager-prev-buttons>
+    <kendo-pager-numeric-buttons [buttonCount]="3"></kendo-pager-numeric-buttons>
+    <kendo-pager-info></kendo-pager-info>
+    <kendo-pager-next-buttons></kendo-pager-next-buttons>
+  </ng-template>
+</kendo-grid>
+
+<kendo-grid
+  *ngIf="appResponsiveService.isTabVertical()"
+  [data]="gridDataToShow"
+  [resizable]="true"
+  [pageSize]="state.take"
+  [skip]="state.skip"
+  [sort]="state.sort"
+  [filter]="state.filter"
+  [sortable]="true"
+  [pageable]="true"
+  [filterable]="true"
+  [selectable]="selectableSettings"
+  [navigable]="true"
+  (dataStateChange)="dataStateChange($event)">
+  <kendo-grid-checkbox-column [width]="41" showSelectAll="true"></kendo-grid-checkbox-column>
+  <kendo-grid-column
+    [title]="singleColumn.title"
+    [field]="singleColumn.field"
+    [filter]="singleColumn.filter ? singleColumn.filter.type : ''"
+    [headerClass]="singleColumn.headerClassObject"
+    [class]="singleColumn.classObject">
+  </kendo-grid-column>
+  <ng-template
+    kendoGridDetailTemplate
+      let-item>
+      <div class="details-row">
+        <div *ngFor="let column of gridColumnsForSmallScreen" >
+          <div class="k-d-grid k-grid-cols-12 pair">
+            <span class="k-colspan-5 key">{{column.title}}</span>
+            <span *ngIf="!column.format" class="k-colspan-7 value">{{item[column.field]}}</span>
+            <span
+              *ngIf="column.format && column.format.type === 'Date'"
+              class="k-colspan-7 value">
+                {{item[column.field] | date: column.format.syntax.slice(4, column.format.syntax.length - 1)}}
+            </span>
+          </div>
+        </div>
+      </div>
+  </ng-template>
+  <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+    <kendo-pager-prev-buttons></kendo-pager-prev-buttons>
+    <kendo-pager-numeric-buttons [buttonCount]="3"></kendo-pager-numeric-buttons>
+    <kendo-pager-info></kendo-pager-info>
+    <kendo-pager-next-buttons></kendo-pager-next-buttons>
+  </ng-template>
+</kendo-grid>

@@ -1,0 +1,55 @@
+
+<div class="sign-up">
+  <main>
+    <div class="brand">
+      <span>D</span>emo <span>A</span>pp
+    </div>
+    <form class="k-form" [formGroup]="form">
+      <fieldset class="k-form-fieldset k-d-grid k-grid-cols-12">
+        <header class="k-colspan-12">SIGN UP</header>
+        <kendo-formfield [ngClass]="appResponsiveService.isMobile() ? 'k-colspan-12' : 'k-colspan-6 mr-10'">
+          <input [formControlName]="'firstName'" placeholder="First Name" kendoTextBox/>
+          <kendo-formerror>First name is required</kendo-formerror>
+        </kendo-formfield>
+
+        <kendo-formfield [ngClass]="appResponsiveService.isMobile() ? 'k-colspan-12' : 'k-colspan-6 ml-10'">
+          <input [formControlName]="'lastName'" placeholder="Last Name" kendoTextBox/>
+          <kendo-formerror>Last name is required</kendo-formerror>
+        </kendo-formfield>
+
+        <kendo-formfield [ngClass]="appResponsiveService.isMobile() ? 'k-colspan-12' : appResponsiveService.isTabVertical() ? 'k-colspan-10' : 'k-colspan-8'">
+          <input [formControlName]="'email'" placeholder="Email Address" kendoTextBox/>
+          <kendo-formerror>A valid email format is required</kendo-formerror>
+        </kendo-formfield>
+
+        <kendo-formfield [ngClass]="appResponsiveService.isMobile() ? 'k-colspan-12' : appResponsiveService.isTabVertical() ? 'k-colspan-10' : 'k-colspan-8'">
+          <input [formControlName]="'password'" type="password" placeholder="Enter Password" kendoTextBox/>
+          <kendo-formerror *ngIf="form.get('password').hasError('passwordStrength')">
+            {{form.get('password').errors['passwordStrength']}}
+          </kendo-formerror>
+        </kendo-formfield>
+
+        <kendo-formfield [ngClass]="appResponsiveService.isMobile() ? 'k-colspan-12' : appResponsiveService.isTabVertical() ? 'k-colspan-10' : 'k-colspan-8'">
+          <input [formControlName]="'confirmPassword'" type="password" placeholder="Re-enter Password" kendoTextBox/>
+          <kendo-formerror>Password didn't match</kendo-formerror>
+        </kendo-formfield>
+
+        <kendo-formfield class="k-colspan-12 mb-5">
+          <div class="k-checkbox-wrap">
+              <input #termsAndPolicy type="checkbox" kendoCheckBox formControlName="termsAndPolicy" />
+              <kendo-label [for]="termsAndPolicy" class="k-checkbox-label">
+                I accept the <span>terms of use</span> and <span>privacy policy</span>
+              </kendo-label>
+              <kendo-formerror *ngIf="showTermsAndPolicyErrorMessage">To have an account, you must accept the term and policy.</kendo-formerror>
+          </div>
+        </kendo-formfield>
+      </fieldset>
+
+      <div class="k-d-grid k-grid-cols-12 k-form-buttons">
+        <button class="k-colspan-6 k-button mr-10" (click)="resetForm()">Reset</button>
+        <button class="k-colspan-6 k-button k-primary ml-10" (click)="signUp()">Submit</button>
+      </div>
+    </form>
+    <p class="line-with-link">Already have an account? <span (click)="goForSignIn()">Sign in</span></p>
+  </main>
+</div>

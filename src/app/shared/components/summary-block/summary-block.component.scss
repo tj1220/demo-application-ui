@@ -1,0 +1,35 @@
+@import '../../../../assets/styles/variables.scss';
+
+.block {
+  padding: 15px 20px;
+  border-radius: 5px;
+  color: white;
+  header {
+    .title {
+      width: calc(100% - 50px);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      display: inline-block;
+    }
+    .icon {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background: white;
+      display: inline-block;
+      i {
+        margin: 11px 10px;
+        font-size: 30px;
+      }
+    }
+  }
+  main {
+    font-family: poppins-bold;
+    font-size: 26px;
+    color: black;
+  }
+  footer {
+    font-size: 13px;
+  }
+}
