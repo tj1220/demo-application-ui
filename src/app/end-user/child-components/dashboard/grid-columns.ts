@@ -5,8 +5,7 @@ export const gridColumns: any[] = [
     title: `Employee ID`,
     filter: {
         type: `text`
-    },
-    width: 130
+    }
   },
   {
     field: `employeeName`,
@@ -28,8 +27,7 @@ export const gridColumns: any[] = [
     format: {
       type: 'Date',
       syntax: '{0: MM-dd-yyyy}'
-    },
-    width: 180
+    }
   },
   {
       field: `age`,
@@ -42,8 +40,7 @@ export const gridColumns: any[] = [
       },
       headerClassObject: {
         'text-center': true
-      },
-      width: 120
+      }
   },
   {
     field: `gender`,
@@ -52,8 +49,7 @@ export const gridColumns: any[] = [
         type: `dropdown`,
         dropdownData: Object.values(gender),
         dropdownDefaultText: 'Both'
-    },
-    width: 110
+    }
   },
   {
     field: `department`,
@@ -62,7 +58,6 @@ export const gridColumns: any[] = [
         type: `dropdown`,
         dropdownData: Object.values(departments),
         dropdownDefaultText: 'All'
-    },
-    width: 150
+    }
   }
 ];

@@ -1,3 +1,4 @@
+import { AppResponsiveService } from './../../../services/app-responsive.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { DataStateChangeEvent, GridDataResult, SelectableSettings } from '@progress/kendo-angular-grid';
 import { State, process } from '@progress/kendo-data-query';
@@ -12,17 +13,17 @@ export class GridComponent implements OnInit {
   @Input() gridColumns: any[] = [];
 
   gridDataToShow: GridDataResult;
-  // singleColumn: any = {};
-  // gridColumnsForSmallScreen: any[];
+  singleColumn: any = {};
+  gridColumnsForSmallScreen: any[];
   public selectedKeys: number[] = [];
-  constructor() { }
+  constructor(public appResponsiveService: AppResponsiveService) { }
 
   ngOnInit(): void {
     this.gridDataToShow = process(this.gridData, this.state);
-    // setTimeout(() => {
-    //   this.singleColumn = this.gridColumns.find((column) => column.isMaster);
-    //   this.gridColumnsForSmallScreen = this.gridColumns.filter((column) => !column.isMaster);
-    // });
+    setTimeout(() => {
+      this.singleColumn = this.gridColumns.find((column) => column.isMaster);
+      this.gridColumnsForSmallScreen = this.gridColumns.filter((column) => !column.isMaster);
+    });
   }
 
   selectableSettings: SelectableSettings = {
