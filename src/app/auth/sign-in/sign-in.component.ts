@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -14,12 +15,13 @@ export class SignInComponent implements OnInit {
     rememberMe: new FormControl()
   });
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {}
 
   signIn() {
     // this.form.markAllAsTouched();
+    this.authService.signIn();
     this.router.navigate([`user`]);
   }
 

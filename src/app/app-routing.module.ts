@@ -6,6 +6,7 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { DashboardComponent } from './end-user/child-components/dashboard/dashboard.component';
 import { EndUserDrawerComponent } from './end-user/end-user-drawer/end-user-drawer.component';
 import { SignInGuard } from './guards/sign-in.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -20,11 +21,13 @@ const routes: Routes = [
   },
   {
     path: `sign-up`,
-    component: SignUpComponent
+    component: SignUpComponent,
+    canActivate: [SignInGuard]
   },
   {
     path: `user`,
     component: EndUserDrawerComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',

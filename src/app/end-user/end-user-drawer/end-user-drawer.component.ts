@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { CommonService } from './../../services/common.service';
 import { Router } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -20,6 +21,7 @@ export class EndUserDrawerComponent implements OnInit {
     { text: pages.demoItems, path: `demo-items`, icon: `k-i-set-column-position` }
   ];
   constructor(
+    private authService: AuthService,
     private commonService: CommonService,
     public appResponsiveService: AppResponsiveService,
     private router: Router) { }
@@ -52,6 +54,7 @@ export class EndUserDrawerComponent implements OnInit {
   }
 
   signOut() {
+    this.authService.signOut();
     this.router.navigate([`sign-in`]);
   }
 
