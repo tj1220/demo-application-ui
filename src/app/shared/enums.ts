@@ -7,14 +7,19 @@ export enum screenWidths {
 };
 
 export enum departments {
-  Engineering = 'Engineering',
-  Sales = 'Sales',
-  HR = 'HR',
-  Management = 'Management',
-  Accounts = 'Accounts'
+  Engineering = `Engineering`,
+  Sales = `Sales`,
+  HR = `HR`,
+  Management = `Management`,
+  Accounts = `Accounts`
 };
 
 export enum gender {
-  Male = 'Male',
-  Female = 'Female'
+  Male = `Male`,
+  Female = `Female`
+};
+
+export enum pages {
+  dashboard = `Dashboard`,
+  demoItems = `Demo Items`
 };
