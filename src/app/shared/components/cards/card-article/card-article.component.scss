@@ -1,0 +1,36 @@
+@import '../../../../../assets/styles/variables.scss';
+
+.card-article {
+  .k-card-title {
+    margin-bottom: 0;
+  }
+  img {
+    width: 100%;
+    background-size: cover;
+  }
+  .k-card-separator {
+    height: auto;
+  }
+  p {
+    text-align: justify;
+    margin-top: 10px !important;
+  }
+  .k-avatar {
+    margin-right: 1em;
+  }
+  .k-card-footer {
+    justify-content: space-between;
+  }
+  .k-icon.k-i-heart {
+    color: $theme-color-1;
+  }
+  .k-card-subtitle {
+    margin: 0 0 5px 0;
+  }
+
+  kendo-card-body {
+    h4 {
+      margin: 0 0 15px 0;
+    }
+  }
+}

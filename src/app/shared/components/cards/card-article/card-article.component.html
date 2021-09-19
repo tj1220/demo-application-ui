@@ -1,0 +1,30 @@
+<kendo-card class="card-article" width="100%">
+  <kendo-card-header class="k-hbox">
+    <kendo-avatar
+      width="40px"
+      height="40px"
+      [imageSrc]="article.creatorIcon"
+      shape="circle"
+    ></kendo-avatar>
+    <div>
+      <h1 kendoCardTitle>{{article.creatorName}}</h1>
+      <p kendoCardSubtitle>{{article.creatorAddress}}</p>
+    </div>
+  </kendo-card-header>
+  <img [src]="article.coverImage" kendoCardMedia alt="cover_img" />
+  <kendo-card-body>
+    <h4>{{article.title}}</h4>
+    <hr kendoCardSeparator />
+    <p>
+      {{article.description}}.. <span class="line-with-link"><span> Read more </span></span>
+    </p>
+  </kendo-card-body>
+  <kendo-card-actions orientation="horizontal" layout="stretched">
+    <button class="k-button k-flat" (click)="toggleLike()">
+      <span [ngClass]="heartIcon()"></span>
+      Like
+    </button>
+    <hr kendoCardSeparator orientation="vertical" />
+    <button class="k-button k-flat">Comment</button>
+  </kendo-card-actions>
+</kendo-card>

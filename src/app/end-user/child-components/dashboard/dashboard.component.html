@@ -8,13 +8,13 @@
   </div>
   <div class="k-d-grid k-grid-cols-12 row mb-16">
     <div class="column-chart" [ngClass]="appResponsiveService.isPC() ? 'k-colspan-12 mb-16' : 'k-colspan-7'">
-      <header>This Year's Statistics</header>
+      <header class="component-header">This Year's Statistics</header>
       <app-column-chart
         [chartObject]="dashboardService.columnChartObject">
       </app-column-chart>
     </div>
     <div class="donut-chart" [ngClass]="appResponsiveService.isPC() ? 'k-colspan-12' : 'k-colspan-5'">
-      <header>Contributions</header>
+      <header class="component-header">Contributions</header>
       <app-donut-chart
         [chartObject]="dashboardService.donutChartObject">
       </app-donut-chart>
@@ -22,7 +22,7 @@
   </div>
   <div class="k-d-grid k-grid-cols-12 row">
     <div class="k-colspan-12 grid">
-      <header>Records</header>
+      <header class="component-header">Records</header>
       <app-grid
         [gridColumns]="gridColumns"
         [gridData]="dashboardService.gridData"></app-grid>
