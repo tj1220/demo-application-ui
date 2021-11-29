@@ -1,3 +1,4 @@
+import { LayoutModule } from '@progress/kendo-angular-layout';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SummaryBlockComponent } from './components/summary-block/summary-block.component';
@@ -9,12 +10,17 @@ import { GridComponent } from './components/grid/grid.component';
 import 'hammerjs';
 import { GridDropdownFilterComponent } from './components/grid/grid-dropdown-filter/grid-dropdown-filter.component';
 import { DropDownListModule } from '@progress/kendo-angular-dropdowns';
+import { CardArticleComponent } from './components/cards/card-article/card-article.component';
+import { CardProductComponent } from './components/cards/card-product/card-product.component';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
 const declarationsAndExports = [
   SummaryBlockComponent,
   ColumnChartComponent,
   DonutChartComponent,
-  GridComponent
+  GridComponent,
+  CardArticleComponent,
+  CardProductComponent
 ];
 
 @NgModule({
@@ -26,7 +32,9 @@ const declarationsAndExports = [
     CommonModule,
     ChartsModule,
     GridModule,
-    DropDownListModule
+    DropDownListModule,
+    LayoutModule,
+    ButtonsModule
   ],
   exports: [
     ...declarationsAndExports

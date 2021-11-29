@@ -37,3 +37,14 @@ body {
 .d-inline-block {
   display: inline-block !important;
 }
+
+.component-header {
+  font-family: poppins-bold;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.disable-element {
+  pointer-events: none;
+  opacity: 0.4;
+}

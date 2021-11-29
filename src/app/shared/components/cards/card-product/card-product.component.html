@@ -1,0 +1,46 @@
+<kendo-card class="card-product" width="100%">
+  <img [src]="imageSource" kendoCardMedia alt="cover_img" />
+  <kendo-card-body>
+    <h2>{{product.title}}</h2>
+    <h4>{{product.brandName}}</h4>
+    <p>{{product.ratingObtained}} / {{product.ratingTotal}} ({{product.numberOfPeopleRated}})</p>
+    <hr kendoCardSeparator />
+    Price: <s>{{(product.price + product.price * 0.15) | currency}}</s> {{product.price | currency}}
+    <div class="quantity">
+      <label>Quantity:</label>
+      <div>
+        <span class="operator" [ngClass]="{'disable-element': selectedProductDetails.quantity == 0}" (click)="decreaseQuantity()">-</span>
+        <span class="value">{{selectedProductDetails.quantity}}</span>
+        <span class="operator" [ngClass]="{'disable-element': selectedProductDetails.quantity == product.maxQuantity}" (click)="increaseQuantity()">+</span>
+      </div>
+    </div>
+    <div class="sizes">
+      <label>Size:</label>
+      <span
+        class="size"
+        [ngClass]="{'selected-size': size.id == selectedProductDetails.sizeId}"
+        *ngFor="let size of product.availableSizes"
+        (click)="selectSize(size)">
+        {{size.label}}
+      </span>
+    </div>
+    <div class="colors">
+      <label>Color:</label>
+      <span
+        class="color"
+        [ngClass]="{'selected-color': color.id == selectedProductDetails.colorId}"
+        *ngFor="let color of product.availableColors"
+        (click)="selectColor(color)">
+        <span class="color-ball" [ngStyle]="{'background': color.colorCode}"></span>
+      </span>
+    </div>
+  </kendo-card-body>
+  <kendo-card-actions [layout]="'end'">
+    <button kendoButton class="buy">
+      Buy Now
+    </button>
+    <button kendoButton class="cart">
+      Add to Cart
+    </button>
+  </kendo-card-actions>
+</kendo-card>

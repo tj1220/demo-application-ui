@@ -15,7 +15,7 @@
   [selectedKeys]="selectedKeys"
   (filterChange)="onFilterChange()"
   (dataStateChange)="dataStateChange($event)">
-  <kendo-grid-checkbox-column [width]="41" showSelectAll="true"></kendo-grid-checkbox-column>
+  <kendo-grid-checkbox-column [width]="41" [showSelectAll]="true"></kendo-grid-checkbox-column>
   <kendo-grid-column
     *ngFor="let column of gridColumns"
     [field]="column.field"
@@ -41,7 +41,7 @@
       <kendo-grid-date-filter-cell
         [column]="column"
         [filter]="filter"
-        [formatPlaceholder]="{year: 'YYYY', month: 'MM', day: 'DD'}">
+        [formatPlaceholder]="{year: 'YYYY', month: 'MM', day: 'DD', hour: '', minute: '', second: ''}">
       </kendo-grid-date-filter-cell>
     </ng-template>
 
@@ -71,7 +71,7 @@
   [selectable]="selectableSettings"
   [navigable]="true"
   (dataStateChange)="dataStateChange($event)">
-  <kendo-grid-checkbox-column [width]="41" showSelectAll="true"></kendo-grid-checkbox-column>
+  <kendo-grid-checkbox-column [width]="41" [showSelectAll]="true"></kendo-grid-checkbox-column>
   <kendo-grid-column
     [title]="singleColumn.title"
     [field]="singleColumn.field"

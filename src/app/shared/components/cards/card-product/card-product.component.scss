@@ -1,0 +1,145 @@
+@import '../../../../../assets/styles/variables.scss';
+
+.card-product {
+  .k-card-title {
+    margin-bottom: 0;
+  }
+  img {
+    width: 100%;
+    background-size: cover;
+  }
+  .k-card-separator {
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .k-avatar {
+    margin-right: 1em;
+  }
+  .k-card-footer {
+    justify-content: space-between;
+  }
+  .k-card-subtitle {
+    margin: 0 0 5px 0;
+  }
+
+  kendo-card-body {
+    h2, h4 {
+      color: $theme-color-1;
+      margin: 0;
+    }
+    p {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+    .quantity {
+      margin: 10px 0;
+      label {
+        margin-right: 10px;
+      }
+      div {
+        display: inline-block;
+      }
+      span {
+        font-weight: 600;
+        color: black;
+        line-height: 25px;
+        width: 30px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid;
+        transition: 0.3s all;
+      }
+      .operator {
+        background: blueviolet;
+        cursor: pointer;
+        border-color: blueviolet;
+        font-size: 20px;
+        &:hover {
+          background: transparent;
+        }
+      }
+      .operator:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+      .operator:last-child {
+        border-radius: 0 5px 5px 0;
+      }
+      .value {
+        background: chartreuse;
+        border-color: chartreuse;
+      }
+    }
+    .sizes {
+      margin: 10px 0;
+      label {
+        margin-right: 10px;
+      }
+      .size {
+        line-height: 25px;
+        width: 45px;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        cursor: pointer;
+        border: 1px solid chartreuse;
+        margin: 3px;
+        &:hover {
+          background: chartreuse;
+        }
+      }
+      .selected-size {
+        background: chartreuse;
+        font-family: poppins-bold;
+      }
+    }
+    .colors {
+      label {
+        margin-right: 10px;
+      }
+      .color {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        display: inline-block;
+        padding: 2px;
+        margin: -6px 5px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        .color-ball {
+          border-radius: 50%;
+          height: 100%;
+          width: 100%;
+          display: block;
+        }
+      }
+      .selected-color {
+        border-color: $theme-color-1;
+      }
+    }
+  }
+
+  kendo-card-actions {
+    button {
+      border-radius: 3px;
+      border: 2px solid transparent;
+      color: black;
+      transition: 0.3s all;
+    }
+    .buy {
+      background: chartreuse;
+      &:hover {
+        background: transparent;
+        border-color: chartreuse;
+      }
+    }
+    .cart {
+      background: blueviolet;
+      &:hover {
+        background: transparent;
+        border-color: blueviolet;
+      }
+    }
+  }
+}
